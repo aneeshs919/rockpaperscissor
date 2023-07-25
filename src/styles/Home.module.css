@@ -1,0 +1,125 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+
+.computerChoice {
+  display: flex;
+  margin: 30px 0;
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: solid 1px #ddd;
+}
+
+.playButton {
+  padding: 20px;
+  margin: 30px 0;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: #ff1867;
+  text-shadow: 0 0 15px #ff1867;
+  transition: all 1s ease-out;
+}
+.playButton:hover {
+  box-shadow: 0 0 5px #ff1867, 0 0 10px #ff1867, 0 0 30px #ff1867;
+  transition: all 0.2s ease-out;
+}
+.mainTitles {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+  text-transform: uppercase;
+  @media (max-width: 700px) {
+    margin-top: 50px;
+  }
+}
+.mainTitles h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  height: 30px;
+}
+.computerGreen,
+.userPink {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.computerGreen {
+  color: aqua;
+}
+.userPink {
+  color: yellow;
+}
+.pointBoardWrap {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}
+.pointItem {
+  display: flex;
+  padding: 10px;
+  background-color: #111;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+.number {
+  width: 100px;
+}
+
+.shake {
+  animation: horizontal-shaking 0.15s ease-in;
+}
+
+.zoomInOutBox {
+  color: #31fe34;
+  animation: zoom-in-zoom-out 1s ease infinite;
+  @media (max-width: 700px) {
+    font-size: 15px;
+  }
+}
+
+@keyframes horizontal-shaking {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
